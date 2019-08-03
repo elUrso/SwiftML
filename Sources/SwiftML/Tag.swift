@@ -8,6 +8,7 @@ public protocol Tag : AnyObject{
     init()
     init(withParent: Tag)
     func display() -> String
+    func parent(_ newParent: Tag) -> Tag
 }
 
 extension Int {
@@ -36,5 +37,10 @@ public extension Tag {
     init(withParent parent: Tag) {
         self.init()
         self.parent = parent
+    }
+
+    func parent(_ newParent: Tag) -> Tag {
+        self.parent = newParent
+        return self
     }
 }

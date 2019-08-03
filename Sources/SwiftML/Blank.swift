@@ -11,8 +11,7 @@ public class Blank: Tag {
     }
 
     public func add(child newChild: Tag) {
-        newChild.parent = self
-        self.child.append(newChild)
+        self.child.append(newChild.parent(self))
     }
 
     public func display() -> String {

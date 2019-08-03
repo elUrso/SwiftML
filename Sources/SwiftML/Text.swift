@@ -7,6 +7,10 @@ public class Text: Tag {
     required public init() {
     
     }
+
+    convenience public init(_ content: String) {
+        self.init(with: content)
+    }
     
     public init(with content: String) {
         innerContent = content

@@ -25,6 +25,7 @@ public class HTML: Blank {
             case .HTML5:
                 self.init()
                 doctype.innerContent = "<!DOCTYPE html>"
+                head.add(child: Meta(with: "name=\"viewport\" content=\"width=device-width, user-scalable=no\"").parent(head))
         }
     }
 
